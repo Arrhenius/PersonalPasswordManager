@@ -1,2 +1,2 @@
-# PersonalPasswordManager
+# Personal Password Manager
 A password manager that is under HEAVY development at the moment...
