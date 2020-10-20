@@ -1,0 +1,37 @@
+Personal Password Manager
+	Must be functional to handle the follow bits of the program through
+	a terminal or the GUI. Terminal will be the first step then the
+	addition of a GUI - probably ImGui - will be the next step.
+
+
+		Login:
+			user
+			password
+			create account
+			forgot password (Future feature)
+			forgot login	(Future feature)
+		User:
+			Profile name
+			user login
+			user password
+			Database with passwords
+		Database:
+			Array of Data logins
+			Size of database
+			Database has to be storable in a file
+			Must be able to add new entries
+			Must be able to delete old entries
+		Data:
+			Will contain three members
+			-Website
+			-Login
+			-Key
+
+		ErrorLogger:
+			Has to have a singular calling function to print error to stream
+			Has to have a log entry of the error that occurred
+		FileSystemHandler:
+			Handle items individually
+				-Directories
+				-Files
+				-Permissions
