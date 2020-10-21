@@ -1,50 +1,43 @@
+/*
+ * Program:	Personal Password Manager
+ * Author:	Abel Atkinson
+ * Date:	10/21/2020
+ * Github:	github.com/arrhenius
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
 #include "Database.h"
 #include "help_func.h"
+#include "Display.h"
 #include <windows.security.cryptography.h>
+
+
+
+// TODO: Create Login Menu
+// TODO: Create Save handler
+// TODO: Create File Handlers
 
 
 
 
 int main(int nargs, char *argv[])
 {
-	Database*		db = new Database();
-	Data			data;
-	unsigned int	i;
-	char			buffer[1024];
 	
-	
-
-	
+	Display* Window = new Display();
 
 
-	for (i = 0; i < 4; i++)
+	while (1)
 	{
-		printf("Enter a website: ");
-		fgets(buffer, 128, stdin);
-		handleString(buffer, __FILE__, __LINE__);
-		data.setWebSite(buffer);
-
-
-		printf("Enter a login: ");
-		fgets(buffer, MAXLOGINSZ, stdin);
-		handleString(buffer, __FILE__, __LINE__);
-		data.setLogin(buffer);
-
-		printf("Enter a key: ");
-		fgets(buffer, MAXKEYSZ, stdin);
-		handleString(buffer, __FILE__, __LINE__);
-		data.setKey(buffer);
-
-		db->addToDatabase(data);
+		Window->DisplayMenu(LOGIN_MENU);
 	}
 
-	db->printDatabase();
+	
+	
 
-	system("pause");
-	db->~Database();
+	
 
 	return EXIT_SUCCESS;
 }
