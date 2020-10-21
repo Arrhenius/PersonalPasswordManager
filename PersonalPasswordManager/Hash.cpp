@@ -109,6 +109,10 @@ bool Hash::HashCompare(HCRYPTHASH hKey, HCRYPTHASH hOriginalHash)
 	DWORD		dwHashLenSize = sizeof(DWORD);
 	DWORD		i;
 
+
+	// Everything within this if statement checks to see if the keys match up
+	// with each other. The function always returns true if it passes all the 
+	// necessary key checks
 	if (CryptGetHashParam(hKey, HP_HASHSIZE, (BYTE*)&pbKey, &dwHashKeyLen, 0) &&
 		CryptGetHashParam(hOriginalHash, HP_HASHSIZE, (BYTE*)&pbHash, &dwOriginalKeyLen, 0) )
 	{
@@ -128,7 +132,7 @@ bool Hash::HashCompare(HCRYPTHASH hKey, HCRYPTHASH hOriginalHash)
 		else
 			return false;
 	}
-		
+	return true;
 }
 
 
