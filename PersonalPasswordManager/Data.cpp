@@ -1,10 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
-#include <vector>
+
 #include "Data.h"
+#include <string.h>
 
 
-//using std::vector;
 
 
 Data::Data()
