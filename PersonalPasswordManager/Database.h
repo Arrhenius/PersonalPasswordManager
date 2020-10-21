@@ -6,21 +6,20 @@
 #include "Data.h"
 #include "FileSystem.h"
 
+
 using std::vector;
 
-class Database : public FileSystem
+class Database
 {
 public:
 	Database();
 	~Database();
 	void	addToDatabase(Data data);
 	void	printDatabase();
-	//void	checkForSave();
 
 private:
 	int				sz;
 	vector<Data>	DataList;
-
 };
 
 
