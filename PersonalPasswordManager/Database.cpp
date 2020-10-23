@@ -7,16 +7,9 @@
 #include "Database.h"
 
 
-using std::vector;
-using std::cout;
-using std::endl;
-
-
-
 Database::Database()
 {
 	memset(this, 0, sizeof(this));
-	checkForSave();
 }
 
 Database::~Database()
@@ -27,13 +20,16 @@ Database::~Database()
 
 void Database::addToDatabase(Data data)
 {
+
 	DataList.push_back(data);
 }
 
 void Database::printDatabase()
 {
-	unsigned int i;
+	using std::cout;
+	using std::endl;
 
+	unsigned int i;
 	for (i = 0; i < DataList.size(); i++)
 	{
 		cout	<< "Login contents: \n" << endl
@@ -41,17 +37,4 @@ void Database::printDatabase()
 				<< "Login:		" << DataList[i].getLogin() << endl
 				<< "Key:		" << DataList[i].getKey() << endl;
 	}
-
 }
-
-#if 0
-void Database::checkForSave()
-{
-	//Check to see if directory exists
-
-	//If directory does not exist do this
-
-	//If directory does exist do this
-}
-
-#endif
