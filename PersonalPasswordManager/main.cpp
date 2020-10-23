@@ -20,7 +20,9 @@
 // TODO: Create Save handler
 // TODO: Create File Handlers
 
-
+// Currently working on the file handling system
+// to perform a CheckSave() function call to load
+// the database in the correct location
 
 
 int main(int nargs, char *argv[])
