@@ -49,6 +49,7 @@ private:
 	int		saveCheck;
 	char		fileSavePath[MAXBUF + 1];
 	FILE*		pFile;
+	
 
 };
 
