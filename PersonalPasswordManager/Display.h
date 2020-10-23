@@ -28,6 +28,7 @@ private:
 	Hash* userLoginName;
 	Hash* userLoginKey;
 	User*	UserID;
+	
 };
 
 
