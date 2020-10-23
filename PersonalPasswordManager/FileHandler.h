@@ -19,11 +19,11 @@ public:
 	FileHandler(int type);
 	~FileHandler();
 	void	BinOpen(const char* pszPath);
-	void	BinClose();
 	void	BinRead();
 	void	BinAppendWrite();
 	void	TextRead();
 	void	TextWrite();
+	void	CloseFile();
 	//checkForSave(char* path);
 private:
 	int	fileType;

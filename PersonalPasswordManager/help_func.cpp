@@ -28,7 +28,7 @@ void errExit(const char* errmsg, const char* fileName, int lineNumber)
 	exit(EXIT_FAILURE);
 }
 
-void handleString(char *buffer, const char* fileName, int lineNumber)
+void handleString(char* buffer, const char* fileName, int lineNumber)
 {
 	if (*buffer)
 	{
@@ -38,5 +38,5 @@ void handleString(char *buffer, const char* fileName, int lineNumber)
 	}
 	errExit("function handleString failed to execute on provided string!",
 		fileName, lineNumber);
-	
+
 }

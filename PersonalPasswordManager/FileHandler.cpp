@@ -1,7 +1,5 @@
-
-
-
 #include "FileHandler.h"
+#include <stdio.h>
 #include <Windows.h>
 #include <io.h>
 #include <fcntl.h>
@@ -42,9 +40,9 @@ FileHandler::FileHandler(int type)
 
 FileHandler::~FileHandler()
 {
-	if (fd)
-		BinClose();
-	memset(fileHandlerPath, 0, sizeof(fileHandlerPath));
+	CloseFile();
+	fileType = 0;
+	memset(this, 0, sizeof(this));
 }
 
 
@@ -54,12 +52,6 @@ void FileHandler::BinOpen(const char* pszPath)
 	{
 		fd = open(pszPath, O_CREAT)
 	}
-}
-
-void FileHandler::BinClose()
-{
-	if (fileType == TYPE_BIN && fd > 0)
-		close(fd);
 }
 
 
@@ -94,4 +86,13 @@ void FileHandler::TextWrite()
 	{
 
 	}
+}
+
+
+void FileHandler::CloseFile()
+{
+	if (fd > 0)
+		close(fd);
+	if (fh)
+		fclose(fh);
 }

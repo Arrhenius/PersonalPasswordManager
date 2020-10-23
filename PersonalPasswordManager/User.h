@@ -18,10 +18,10 @@ public:
 	void	setPassword(const char* pass);
 
 private:
-	char			firstName[MAXNAMESZ + 1];
-	char			lastName[MAXNAMESZ + 1];
-	Hash*			usernameHash;
-	Hash*			passwordHash;
+	char		firstName[MAXNAMESZ + 1];
+	char		lastName[MAXNAMESZ + 1];
+	Hash*		usernameHash;
+	Hash*		passwordHash;
 	Database*	db;
 };
 #endif // USER_H

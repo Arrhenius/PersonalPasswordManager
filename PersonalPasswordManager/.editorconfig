@@ -5,13 +5,13 @@ root = true
 
 
 #-------------------------------------------------#
-#             3 space tab indentation             #
+#             4 space tab indentation             #
 #-------------------------------------------------#
 
-[*.{c,h,hpp}]
+[*.{c,h,hpp,cpp}]
 
 indent_style = tab
-indent_size  = 3
+indent_size  = 4
 
 
 [*]

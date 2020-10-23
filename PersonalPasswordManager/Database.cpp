@@ -32,9 +32,9 @@ void Database::printDatabase()
 	unsigned int i;
 	for (i = 0; i < DataList.size(); i++)
 	{
-		cout	<< "Login contents: \n" << endl
-				<< "Website:	" << DataList[i].getWebSite() << endl
-				<< "Login:		" << DataList[i].getLogin() << endl
-				<< "Key:		" << DataList[i].getKey() << endl;
+		cout << "Login contents: \n" << endl
+			<< "Website:	" << DataList[i].getWebSite() << endl
+			<< "Login:		" << DataList[i].getLogin() << endl
+			<< "Key:		" << DataList[i].getKey() << endl;
 	}
 }

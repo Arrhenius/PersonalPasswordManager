@@ -16,18 +16,18 @@
 
 
 
-// TODO: Create Login Menu
-// TODO: Create Save handler
-// TODO: Create File Handlers
+ // TODO: Create Login Menu
+ // TODO: Create Save handler
+ // TODO: Create File Handlers
 
-// Currently working on the file handling system
-// to perform a CheckSave() function call to load
-// the database in the correct location
+ // Currently working on the file handling system
+ // to perform a CheckSave() function call to load
+ // the database in the correct location
 
 
-int main(int nargs, char *argv[])
+int main(int nargs, char* argv[])
 {
-	
+
 	Display* Window = new Display();
 
 
@@ -36,10 +36,10 @@ int main(int nargs, char *argv[])
 		Window->DisplayMenu(LOGIN_MENU);
 	}
 
-	
-	
 
-	
+
+
+
 
 	return EXIT_SUCCESS;
 }

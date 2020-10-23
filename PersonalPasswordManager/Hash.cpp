@@ -31,7 +31,7 @@ Hash::Hash(const char* pszKey)
 		exit(EXIT_FAILURE);
 	}
 
-	if (!CryptHashData(hHashKey, (BYTE*)pszKey, sizeof(pszKey),	0))
+	if (!CryptHashData(hHashKey, (BYTE*)pszKey, sizeof(pszKey), 0))
 	{
 		cout << "CryptHashData() failed! Terminating!" << endl;
 		cout << "\tError code: " << GetLastError() << endl;
@@ -61,7 +61,7 @@ Hash::~Hash()
 void Hash::HashPrint()
 {
 	HCRYPTHASH	hHash;
-	BYTE*		pbHash;
+	BYTE* pbHash;
 	DWORD		dwHashLen;
 	DWORD		dwHashLenSize = sizeof(DWORD);
 	DWORD		i;
@@ -102,8 +102,8 @@ void Hash::hashValue(HCRYPTHASH hKey, BYTE** pbHash, DWORD dwHashLen)
 bool Hash::HashCompare(HCRYPTHASH hKey, HCRYPTHASH hOriginalHash)
 {
 	HCRYPTHASH	hHash;
-	BYTE*		pbHash;
-	BYTE*		pbKey;
+	BYTE* pbHash;
+	BYTE* pbKey;
 	DWORD		dwHashKeyLen;
 	DWORD		dwOriginalKeyLen;
 	DWORD		dwHashLenSize = sizeof(DWORD);
@@ -114,7 +114,7 @@ bool Hash::HashCompare(HCRYPTHASH hKey, HCRYPTHASH hOriginalHash)
 	// with each other. The function always returns true if it passes all the 
 	// necessary key checks
 	if (CryptGetHashParam(hKey, HP_HASHSIZE, (BYTE*)&pbKey, &dwHashKeyLen, 0) &&
-		CryptGetHashParam(hOriginalHash, HP_HASHSIZE, (BYTE*)&pbHash, &dwOriginalKeyLen, 0) )
+		CryptGetHashParam(hOriginalHash, HP_HASHSIZE, (BYTE*)&pbHash, &dwOriginalKeyLen, 0))
 	{
 		if (dwHashKeyLen == dwOriginalKeyLen)
 		{
