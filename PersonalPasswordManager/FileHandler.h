@@ -4,18 +4,33 @@
 #include <stdio.h>
 #include <string.h>
 
+#define MAXFILENAME	32
+#define MAXFILEPATH	512
 
-#define MAXFILEPATH	256
+#define TYPE_BIN		700
+#define TYPE_TEXT		701
+#define TYPE_LOG		702
+#define TYPE_BINSAVE	703	
+
 
 class FileHandler
 {
 public:
-	FileHandler();
+	FileHandler(int type);
 	~FileHandler();
-	checkForSave(char* path);
+	void	BinOpen(const char* pszPath);
+	void	BinClose();
+	void	BinRead();
+	void	BinAppendWrite();
+	void	TextRead();
+	void	TextWrite();
+	//checkForSave(char* path);
 private:
-	FILE* fh;
+	int	fileType;
+	int	fd;
+	char	fileName[MAXFILENAME + 1];
 	char	fileHandlerPath[MAXFILEPATH + 1];
+	FILE* fh;
 };
 
 
