@@ -1,7 +1,7 @@
 #ifndef USER_H
 #define USER_H
 
-#define MAXNAMESZ	64
+#define MAXNAMESZ	128
 #define MAXPWSZ 512
 
 #include "Hash.h"
