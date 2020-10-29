@@ -11,7 +11,7 @@
 #include <Windows.h>
 #include "Database.h"
 #include "help_func.h"
-#include "Display.h"
+#include "DisplayHandler/Display.h"
 #include <windows.security.cryptography.h>
 
 

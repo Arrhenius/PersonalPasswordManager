@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Display.h"
-#include "Hash.h"
+#include "../Hash.h"
 
 
 

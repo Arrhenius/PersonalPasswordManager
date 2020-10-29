@@ -19,18 +19,19 @@ public:
 	FileHandler(int type);
 	~FileHandler();
 	void	BinOpen(const char* pszPath);
-	void	BinRead();
+	void	BinRead(void* data);
 	void	BinAppendWrite();
+	void	Write(void* data, size_t sz);
 	void	TextRead();
 	void	TextWrite();
 	void	CloseFile();
 	//checkForSave(char* path);
 private:
-	int	fileType;
-	int	fd;
+	int		fileType;
+	int		fd;
 	char	fileName[MAXFILENAME + 1];
 	char	fileHandlerPath[MAXFILEPATH + 1];
-	FILE* fh;
+	FILE*	fh;
 };
 
 

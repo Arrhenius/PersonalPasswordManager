@@ -11,7 +11,8 @@
 
 
 //#include "Hash.h"
-#include "User.h"
+#include "../User.h"
+#include "../FileSystem/FileSystem.h"
 
 #define LOGIN_MENU	100
 
@@ -24,10 +25,13 @@ public:
 	void	SetKeyHash(const char* pszUserKey);
 	void	DisplayMenu(int menu);
 	void	LoginMenu();
+	void	CheckSaves();
+	
 private:
-	Hash* userLoginName;
-	Hash* userLoginKey;
-	User*	UserID;
+	FileSystem* fileSystem;
+	Hash*		userLoginName;
+	Hash*		userLoginKey;
+	User*		userID;
 	
 };
 

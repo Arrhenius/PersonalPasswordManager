@@ -1,7 +1,62 @@
 #include "FileSystem.h"
+#include <stdio.h>
 
 
 
+
+
+FileSystem::FileSystem()
+{
+	memset(this, 0, sizeof(this));
+
+}
+
+
+char* FileSystem::GetCurrentDirectoryPath()
+{
+	return currentDirectoryPath;
+}
+
+char* FileSystem::GetCurrentSavePath()
+{
+	return saveDirectoryPath;
+}
+
+
+void FileSystem::SetCurrentDirectoryPath()
+{
+	using std::cerr;
+	using std::endl;
+	if (!getcwd(currentDirectoryPath, sizeof(currentDirectoryPath)))
+	{
+		cerr << "Error: " << strerror(errno) << endl;
+	}
+}
+
+void FileSystem::SetCurrentSavePath()
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#if 0
 FileSystem::FileSystem()
 {
 	fd			= 0;
@@ -175,7 +230,7 @@ void FileSystem::checkForSave()
 	 
 }
 
-
+#endif
 
 
 

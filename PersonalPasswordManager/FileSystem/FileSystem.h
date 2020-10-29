@@ -39,16 +39,27 @@ class FileSystem
 public:
 	FileSystem();
 	~FileSystem();
+	void	SetCurrentDirectoryPath();
+	void	SetCurrentSavePath();
+	char*	GetCurrentDirectoryPath();
+	char*	GetCurrentSavePath();
+#if 0
 	int		SetMode(const char* path, int mask);
-	void		checkForSave();
-	bool		DoesPathExist(const char* path);
-	bool		OpenFile(const char* fileName, int option);
+	void	checkForSave();
+	bool	DoesPathExist(const char* path);
+	bool	OpenFile(const char* fileName, int option);
+#endif
 private:
+
+	char	currentDirectoryPath[MAXBUF + 1];
+	char	saveDirectoryPath[MAXBUF + 1];
+#if 0
 	int		fd;
 	int		fileStatus;
 	int		saveCheck;
-	char		fileSavePath[MAXBUF + 1];
-	FILE*		pFile;
+	char	fileSavePath[MAXBUF + 1];
+	FILE*	pFile;
+#endif
 	
 
 };
